@@ -1,13 +1,27 @@
+document.getElementById('scale').addEventListener('input', function (event) {
+    // console.log(event)
+    var scale = event.target.value
+    console.log(scale)
+    var scaleValue = document.getElementById('scaleValue');
+    scaleValue.innerText = scale
+
+
+});
+
 
 document.getElementById('qrCreate').addEventListener('click', async function () {
+    var inputString = document.getElementById('qr-text').value;
+    var scaleValue = document.getElementById('scaleValue').value;
+    var inputString = document.getElementById('qr-text').value;
     var inputString = document.getElementById('qr-text').value;
 
     // Example JSON data you want to send in the body of the request
     const data = {
-        text: 'Example text for QR code',
-        light_main: 'white',
+        text: inputString,
+        light_main: light_main,
         dark_main: 'black',
         border_color: 'white',
+        scale: scaleValue,
         // Add any other data fields you need
     };
 
@@ -28,6 +42,6 @@ document.getElementById('qrCreate').addEventListener('click', async function () 
 
 function makeImage(filename) {
     const img = document.createElement('img');
-    img.src = `http://127.0.0.1:3000/${filename}`;
+    img.src = `http://127.0.0.1:3000/static/qr-images/${filename}`;
     document.body.appendChild(img);
 }
