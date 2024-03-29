@@ -5,27 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>qr4all</title>
-    <!-- import file js.js -->
-
-
     <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
 <body>
-
     <h1>qr4All</h1>
-    <label for="qr-text">QR Content</label>
+    <label for="qr-text">QR Content:</label>
     <input id="qr-text" type="text">
-    <input id="light_color" type="color" value="#ffffff">
-    <!-- create range type from 1 to 10 with step of .5 -->
+
+    <label for="scale">Size (1 to 10):</label>
     <input id="scale" type="range" min="1" max="10" step=".5" value="4">
-    <p id="scaleValue"></p>
+    <p id="scaleValue">4</p> <!-- Initialize with the default value of the scale input -->
 
-    <!-- display the value of the range -->
-    </p>
-    <button id="qrCreate">Create</button>
+    <label for="light_main">light_main:</label>
+    <input id="light_main" type="color" value="#ffffff">
+
+    <label for="dark_main">dark_main:</label>
+    <input id="dark_main" type="color" value="#000000">
+
+    <label for="data_light">data_light:</label>
+    <input id="data_light" type="color" value="#ffffff">
+
+    <label for="data_dark">data_dark:</label>
+    <input id="data_dark" type="color" value="#000000">
+
+    <label for="quiet_zone">Border Color:</label>
+    <input id="quiet_zone" type="color" value="#ffffff">
 </body>
-
 <script src="/js.js"></script>
 
 </html>

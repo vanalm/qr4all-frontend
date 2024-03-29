@@ -1,3 +1,55 @@
 body {
-    background: aqua;
+    background: rgb(148, 183, 183);
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Style the main heading (h1) */
+h1 {
+    color: #333;
+    /* Set the text color to a dark gray */
+}
+
+/* Style all <label> elements */
+label {
+    display: block;
+    /* Make each label take up its own line */
+    margin-top: 20px;
+    /* Add space above the label */
+    margin-bottom: 5px;
+    /* Add a small space below the label before the input */
+}
+
+/* Style the text, color, and range inputs */
+input[type="text"],
+input[type="color"],
+input[type="range"] {
+    display: block;
+    /* Make each input take up its own line */
+    margin-bottom: 20px;
+    /* Add space below each input */
+}
+
+/* Style the 'Create' button */
+#qrCreate {
+    display: block;
+    /* Ensure the button takes up its own line */
+    margin-top: 20px;
+    /* Add space above the button */
+    padding: 10px 20px;
+    /* Add padding inside the button for width (20px) and height (10px) */
+    background-color: #4CAF50;
+    /* Set the background color of the button */
+    color: white;
+    /* Set the text color inside the button */
+    border: none;
+    /* Remove the default border */
+    cursor: pointer;
+    /* Change the cursor to a pointer when hovering over the button */
+}
+
+/* Style the 'Create' button on hover */
+#qrCreate:hover {
+    background-color: #45a049;
+    /* Darken the button background color when hovered */
 }
